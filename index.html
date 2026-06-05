@@ -23,9 +23,9 @@
       </a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#hero" class="nav-link active">Inicio</a></li>
-        <li><a href="#about" class="nav-link">Equipo</a></li>
+        <li><a href="#about" class="nav-link">Historia</a></li>
         <li><a href="#categories" class="nav-link">Categorías</a></li>
-        <li><a href="#calendar" class="nav-link">Calendario</a></li>
+        <li><a href="#teams" class="nav-link">Equipos</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
       <div class="nav-actions">
@@ -48,7 +48,7 @@
       <p class="hero-desc">Mazatlán no solo es playa. Aquí también se hace historia.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-accent btn-lg">ÚNETE AL EQUIPO</a>
-        <a href="#calendar" class="btn btn-outline btn-lg">VER CALENDARIO</a>
+        <a href="#teams" class="btn btn-outline btn-lg">VER EQUIPOS</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -95,16 +95,12 @@
           </p>
           <div class="about-stats">
             <div class="stat">
-              <span class="stat-number">3</span>
-              <span class="stat-label">Temporadas</span>
-            </div>
-            <div class="stat">
               <span class="stat-number">60+</span>
               <span class="stat-label">Jugadores</span>
             </div>
             <div class="stat">
               <span class="stat-number">3</span>
-              <span class="stat-label">Campeonatos</span>
+              <span class="stat-label">Campeonatos de esta última temporada en la liga FlagMaz</span>
             </div>
           </div>
         </div>
@@ -166,42 +162,65 @@
     </div>
   </section>
 
-  <!-- ===== CALENDAR ===== -->
-  <section id="calendar" class="section section-light">
+  <!-- ===== TEAMS ===== -->
+  <section id="teams" class="section section-light">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">CALENDARIO</span>
-        <h2 class="section-title">PRÓXIMOS PARTIDOS</h2>
+        <span class="section-tag">NUESTROS EQUIPOS</span>
+        <h2 class="section-title">ORGULLO HALCÓN</h2>
         <div class="section-divider"></div>
       </div>
-      <div class="table-wrapper" data-aos="fade-up">
-        <table class="calendar-table">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Hora</th>
-              <th>Rival</th>
-              <th>Lugar</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>6 Jun 2026</td>
-              <td>16:00 hrs</td>
-              <td><strong>Redskin</strong></td>
-              <td>Campo "Campeones Nacionales de 1989"</td>
-              <td><span class="badge badge-next">PRÓXIMO</span></td>
-            </tr>
-            <tr>
-              <td>6 Jun 2026</td>
-              <td>19:00 hrs</td>
-              <td><strong>Redskin Femenil</strong></td>
-              <td>Campo "Campeones Nacionales de 1989"</td>
-              <td><span class="badge badge-next">PRÓXIMO</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="teams-grid">
+        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-image">
+            <img src="images/u14.jpeg" alt="U14" style="object-position: center 38%;" />
+          </div>
+          <div class="team-body">
+            <h3 class="team-title">U14</h3>
+            <span class="team-badge">CAMPEONAS</span>
+            <p class="team-desc">Actuales campeonas de la liga FlagMaz</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-image">
+            <img src="images/u16.jpeg" alt="U16" style="object-position: center 38%;" />
+          </div>
+          <div class="team-body">
+            <h3 class="team-title">U16</h3>
+            <span class="team-badge">CAMPEONAS</span>
+            <p class="team-desc">Actuales campeonas de la liga FlagMaz</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-image">
+            <img src="images/u18.jpeg" alt="U18" />
+          </div>
+          <div class="team-body">
+            <h3 class="team-title">U18</h3>
+            <span class="team-badge team-badge-sub">SUBCAMPEONAS</span>
+            <p class="team-desc">Actuales subcampeonas de la liga FlagMaz</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-image">
+            <img src="images/golden.jpeg" alt="Golden" />
+          </div>
+          <div class="team-body">
+            <h3 class="team-title">GOLDEN</h3>
+            <span class="team-badge">CAMPEONAS</span>
+            <p class="team-desc">Actuales campeonas de la liga FlagMaz</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-image">
+            <img src="images/juvenil.jpg" alt="Juvenil Menor" />
+          </div>
+          <div class="team-body">
+            <h3 class="team-title">JUVENIL MENOR</h3>
+            <span class="team-badge team-badge-active">ACTIVO</span>
+            <p class="team-desc">En temporada actualmente</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -242,7 +261,7 @@
             <li><a href="#hero">Inicio</a></li>
             <li><a href="#about">Equipo</a></li>
             <li><a href="#categories">Categorías</a></li>
-            <li><a href="#calendar">Calendario</a></li>
+            <li><a href="#teams">Equipos</a></li>
           </ul>
         </div>
         <div class="footer-links">

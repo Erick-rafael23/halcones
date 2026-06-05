@@ -780,54 +780,83 @@ h1, h2, h3, h4, h5 { font-family: var(--font-heading); text-transform: uppercase
 }
 
 /* ===== CALENDAR ===== */
-.table-wrapper {
-  overflow-x: auto;
-  border-radius: 4px;
-  border: 1px solid #eee;
+/* ===== TEAMS ===== */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.calendar-table {
+.team-card {
+  background: var(--black-card);
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--yellow);
+  box-shadow: 0 12px 40px rgba(245, 166, 35, 0.12);
+}
+
+.team-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.team-image img {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.5s;
 }
 
-.calendar-table thead {
-  background: linear-gradient(135deg, var(--black), var(--black-soft));
+.team-card:hover .team-image img {
+  transform: scale(1.08);
+}
+
+.team-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.team-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.team-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.8rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background: var(--yellow);
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.team-badge-sub {
+  background: #888;
   color: var(--white);
 }
 
-.calendar-table th {
-  padding: 1rem 1.2rem;
-  text-align: left;
-  font-family: var(--font-heading);
+.team-badge-active {
+  background: #22c55e;
+  color: var(--white);
+}
+
+.team-desc {
   font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.calendar-table td {
-  padding: 1rem 1.2rem;
-  border-bottom: 1px solid #eee;
-  transition: background 0.2s;
-}
-
-.calendar-table tbody tr { transition: all 0.2s; }
-
-.calendar-table tbody tr:hover {
-  background: rgba(245, 166, 35, 0.03);
-}
-
-.calendar-table tbody tr:last-child td { border-bottom: none; }
-
-.badge {
-  display: inline-block;
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  padding: 0.35rem 1.1rem;
-  border-radius: 2px;
-  text-transform: uppercase;
+  color: var(--gray-text);
+  line-height: 1.5;
 }
 
 .badge-next {
@@ -1108,6 +1137,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-heading); text-transform: uppercase
   .whatsapp-icon { font-size: 4rem; }
   .about-image-frame img { height: 320px; }
   .section::before, .section::after { display: none; }
+  .teams-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1149,9 +1179,8 @@ h1, h2, h3, h4, h5 { font-family: var(--font-heading); text-transform: uppercase
 
   .category-image { height: 200px; }
 
-  .calendar-table { font-size: 0.85rem; }
-  .calendar-table th,
-  .calendar-table td { padding: 0.75rem 0.6rem; }
+  .teams-grid { grid-template-columns: 1fr; }
+  .team-image { height: 180px; }
 
   .whatsapp-text { font-size: 1rem; }
 
@@ -1166,6 +1195,8 @@ h1, h2, h3, h4, h5 { font-family: var(--font-heading); text-transform: uppercase
   .hero-subtitle { font-size: 1rem; }
   .whatsapp-icon { font-size: 3rem; }
   .about-stats { flex-direction: column; gap: 1rem; }
+  .teams-grid { grid-template-columns: 1fr; }
+  .team-image { height: 160px; }
   .section-title { font-size: 1.6rem; }
   .contact-quote { padding: 1.25rem; }
   .social-link { width: 42px; height: 42px; font-size: 1.1rem; }
