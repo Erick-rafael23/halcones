@@ -1,0 +1,7 @@
+{
+  "name": "halcones-mazatlan",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -L -p 3000"
+  }
+}
